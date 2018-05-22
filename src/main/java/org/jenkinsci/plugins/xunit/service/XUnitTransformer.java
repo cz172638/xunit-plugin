@@ -49,12 +49,11 @@ public class XUnitTransformer extends MasterToSlaveFileCallable<Boolean> {
     private String processorId;
 
     @Inject
-    void load(
-            XUnitReportProcessorService xUnitReportProcessorService,
-            XUnitConversionService xUnitConversionService,
-            XUnitValidationService xUnitValidationService,
-            XUnitToolInfo xUnitToolInfo,
-            XUnitLog xUnitLog) {
+    public XUnitTransformer(XUnitReportProcessorService xUnitReportProcessorService,
+                            XUnitConversionService xUnitConversionService,
+                            XUnitValidationService xUnitValidationService,
+                            XUnitToolInfo xUnitToolInfo,
+                            XUnitLog xUnitLog) {
         this.xUnitReportProcessorService = xUnitReportProcessorService;
         this.xUnitValidationService = xUnitValidationService;
         this.xUnitConversionService = xUnitConversionService;
